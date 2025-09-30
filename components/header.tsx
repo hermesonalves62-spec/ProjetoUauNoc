@@ -80,7 +80,7 @@ export function Header() {
     <header className="sticky top-0 z-[999] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-14 sm:h-16">
-          <div className="flex-shrink-0 -ml-1 sm:-ml-4 lg:-ml-8">
+          <div className="flex-shrink-0 ml-0 sm:-ml-4 lg:-ml-8">
             <Image
               src="/images/noc-servicos-logo.png"
               alt="NOC Serviços"

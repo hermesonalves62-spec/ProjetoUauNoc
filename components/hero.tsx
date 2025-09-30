@@ -34,7 +34,7 @@ export function Hero() {
     >
       <div
         ref={logoAnimation.ref}
-        className={`absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-20 pointer-events-none transition-all duration-1000 ease-out transform-gpu will-change-transform ${
+        className={`absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-8 pointer-events-none transition-all duration-1000 ease-out transform-gpu will-change-transform ${
           logoAnimation.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
         }`}
       >
