@@ -39,9 +39,6 @@
     --sidebar-accent-foreground: 0 0% 100%; /* Sidebar accent text */
     --sidebar-border: 214 32% 91%; /* Sidebar border */
     --sidebar-ring: 195 65% 50%; /* Sidebar focus ring */
-    /* Font variables */
-    --font-orbitron: "Orbitron", sans-serif;
-    --font-poppins: "Poppins", sans-serif;
   }
 
   .dark {
