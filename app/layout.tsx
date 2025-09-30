@@ -40,11 +40,11 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "NOC Comércios e Serviços - Cabeamento Estruturado e Rede Telecom | Triângulo Mineiro",
+  title: "NOC Comércios e Serviços - Cabeamento Estruturado e Rede Telecom | Centro-Sul de Sergipe",
   description:
     "Soluções especializadas em cabeamento estruturado para empresas e rede telecom para provedores. NOC Comércios e Serviços é a melhor opção para quem busca confiança e profissionalismo no setor de telecom.",
   keywords:
-    "cabeamento estruturado, rede telecom, NOC, provedores de internet, infraestrutura de rede, fibra óptica, projetos de rede, Triângulo Mineiro, Minas Gerais, serviços telecom",
+    "cabeamento estruturado, rede telecom, NOC, provedores de internet, infraestrutura de rede, fibra óptica, projetos de rede, Centro-Sul de Sergipe, Sergipe, serviços telecom",
   authors: [{ name: "NOC Comércios e Serviços" }],
   creator: "NOC Comércios e Serviços",
   publisher: "NOC Comércios e Serviços",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     url: "https://www.nocservicos.com.br",
     title: "NOC Comércios e Serviços - Cabeamento Estruturado e Rede Telecom",
     description:
-      "Soluções especializadas em cabeamento estruturado para empresas e rede telecom para provedores no Triângulo Mineiro.",
+      "Soluções especializadas em cabeamento estruturado para empresas e rede telecom para provedores no Centro-Sul de Sergipe.",
     siteName: "NOC Comércios e Serviços",
     images: [
       {
@@ -86,14 +86,14 @@ const jsonLd = {
   email: "contato@nocservicos.com.br",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Triângulo Mineiro",
-    addressRegion: "MG",
+    addressLocality: "Centro-Sul de Sergipe",
+    addressRegion: "SE",
     addressCountry: "BR",
   },
   openingHours: ["Mo-Fr 08:00-18:00"],
   areaServed: {
     "@type": "State",
-    name: "Minas Gerais",
+    name: "Sergipe",
   },
   serviceType: ["Cabeamento Estruturado", "Rede Telecom", "Infraestrutura de Rede", "Projetos de Fibra Óptica"],
 }
