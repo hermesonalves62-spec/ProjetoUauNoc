@@ -73,7 +73,7 @@ export function FAQ() {
           </p>
         </div>
 
-        <div ref={faqsAnimation.ref} className="max-w-2xl mx-auto space-y-3 sm:space-y-4">
+        <div ref={faqsAnimation.ref} className="max-w-2xl mx-auto space-y-3 sm:space-y-4 font-light">
           {faqs.map((faq, index) => (
             <Card
               key={index}
@@ -88,7 +88,7 @@ export function FAQ() {
                   onClick={() => toggleItem(index)}
                   className="w-full p-4 sm:p-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300"
                 >
-                  <h3 className="text-sm sm:text-base md:text-lg font-medium pr-3 text-[rgba(0,50,112,1)] text-balance">
+                  <h3 className="text-sm sm:text-base md:text-lg pr-3 text-[rgba(0,50,112,1)] text-balance font-normal">
                     {faq.question}
                   </h3>
                   <div className={`transition-transform duration-300 ${openItems.includes(index) ? "rotate-180" : ""}`}>

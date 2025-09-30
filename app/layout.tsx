@@ -1,13 +1,34 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Poppins, Orbitron } from "next/font/google"
+import { Poppins } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
-const orbitron = Orbitron({
+const orbitron = localFont({
+  src: [
+    {
+      path: "./fonts/Orbitron-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Orbitron-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Orbitron-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Orbitron-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
   variable: "--font-orbitron",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
 })
 
 const poppins = Poppins({

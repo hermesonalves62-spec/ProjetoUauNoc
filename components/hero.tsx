@@ -26,7 +26,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="py-4 md:py-16 lg:py-20 bg-cover bg-center bg-no-repeat relative min-h-[65vh] sm:min-h-[70vh] md:min-h-[85vh] overflow-hidden"
+      className="py-2 md:py-16 lg:py-20 bg-cover bg-center bg-no-repeat relative min-h-[50vh] sm:min-h-[70vh] md:min-h-[85vh] overflow-hidden"
       style={{
         backgroundImage:
           "linear-gradient(to bottom, transparent 70%, #F7F7F9 100%), url('/images/hero-background.png')",
@@ -50,13 +50,13 @@ export function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-2 sm:px-6 md:px-8 lg:px-12 relative z-10 pt-6 sm:pt-12 md:pt-20 overflow-hidden">
+      <div className="container mx-auto px-2 sm:px-6 md:px-8 lg:px-12 relative z-10 pt-4 sm:pt-12 md:pt-20 overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 md:gap-16 lg:gap-24 items-center">
-          <div className="space-y-4 sm:space-y-8 md:space-y-10 max-w-none lg:max-w-2xl xl:max-w-3xl">
-            <div className="space-y-3 sm:space-y-4 md:space-y-8 text-center md:text-left">
+          <div className="space-y-2 sm:space-y-8 md:space-y-10 max-w-none lg:max-w-2xl xl:max-w-3xl">
+            <div className="space-y-2 sm:space-y-4 md:space-y-8 text-center md:text-left">
               <h1
                 ref={titleAnimation.ref}
-                className={`font-bold leading-tight transition-all duration-1000 ease-out transform-gpu will-change-transform ${
+                className={`font-bold leading-tight transition-all duration-1000 ease-out transform-gpu will-change-transform mt-6 sm:mt-0 ${
                   titleAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
                 style={{
@@ -73,6 +73,7 @@ export function Hero() {
                   <span className="text-gray-700"> para empresas </span>
                 </span>
                 <span className="block text-gray-700 font-normal sm:whitespace-nowrap">
+                  <span className="text-gray-700">e </span>
                   <span className="text-[#003270]">rede telecom</span>
                   <br className="sm:hidden" /> <span className="whitespace-nowrap">para provedores</span>
                 </span>
