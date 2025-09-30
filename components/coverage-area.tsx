@@ -27,7 +27,7 @@ export function CoverageArea() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-6xl mx-auto">
           <div className="space-y-4 sm:space-y-6 order-1 lg:order-1">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans text-[rgba(0,50,112,1)] text-balance font-semibold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans text-[rgba(0,50,112,1)] text-balance font-semibold text-center lg:text-left">
               Nossa região de atuação
             </h2>
 

@@ -110,7 +110,7 @@ export function OurServices() {
   const extendedSlides = [totalSlides - 1, ...Array.from({ length: totalSlides }, (_, i) => i), 0]
 
   return (
-    <section id="servicos" className="py-16 bg-gray-50">
+    <section id="servicos" className="py-16 bg-[#F7F7F7]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <h2
           ref={titleAnimation.ref}

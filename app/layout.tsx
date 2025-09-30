@@ -29,6 +29,7 @@ const orbitron = localFont({
     },
   ],
   variable: "--font-orbitron",
+  display: "swap",
 })
 
 const poppins = Poppins({
@@ -123,6 +124,8 @@ export default function RootLayout({
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+        <link rel="preload" href="/fonts/Orbitron-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Orbitron-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
       </head>
       <body className="overflow-x-hidden">
         {children}

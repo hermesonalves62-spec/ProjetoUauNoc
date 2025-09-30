@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Added @theme block for Tailwind CSS v4 font configuration */
+/* Updated @theme block for Tailwind CSS v4 font configuration */
 @theme {
   --font-family-sans: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
   --font-family-body: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
@@ -95,8 +95,9 @@
     color: hsl(var(--foreground));
     min-height: 100vh;
     width: 100%;
-    /* Alterando fonte padrão do body para Orbitron */
-    font-family: var(--font-orbitron), sans-serif;
+    /* Using Next.js font variable directly for Orbitron */
+    font-family: var(--font-orbitron), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
   }
 
   .container {
