@@ -49,6 +49,10 @@ export const metadata: Metadata = {
   creator: "NOC Comércios e Serviços",
   publisher: "NOC Comércios e Serviços",
   robots: "index, follow",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
