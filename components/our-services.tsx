@@ -1,13 +1,14 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function OurServices() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(1) // Start at 1 to account for cloned first slide
   const [isTransitioning, setIsTransitioning] = useState(false)
   const titleAnimation = useScrollAnimation<HTMLHeadingElement>({ delay: 200 })
+  const carouselRef = useRef<HTMLDivElement>(null)
 
   const services = [
     {
@@ -59,7 +60,7 @@ export function OurServices() {
       const newServicesPerSlide = getServicesPerSlide()
       if (newServicesPerSlide !== servicesPerSlide) {
         setServicesPerSlide(newServicesPerSlide)
-        setCurrentSlide(0)
+        setCurrentSlide(1) // Reset to 1 instead of 0
       }
     }
 
@@ -68,26 +69,45 @@ export function OurServices() {
     return () => window.removeEventListener("resize", handleResize)
   }, [servicesPerSlide])
 
+  useEffect(() => {
+    if (!isTransitioning) return
+
+    const timer = setTimeout(() => {
+      if (currentSlide === 0) {
+        // Jumped to clone at start, reset to actual last slide
+        setCurrentSlide(totalSlides)
+        setIsTransitioning(false)
+      } else if (currentSlide === totalSlides + 1) {
+        // Jumped to clone at end, reset to actual first slide
+        setCurrentSlide(1)
+        setIsTransitioning(false)
+      } else {
+        setIsTransitioning(false)
+      }
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [currentSlide, isTransitioning, totalSlides])
+
   const nextSlide = () => {
     if (isTransitioning) return
     setIsTransitioning(true)
-    setCurrentSlide((prev) => (prev + 1) % totalSlides)
-    setTimeout(() => setIsTransitioning(false), 500)
+    setCurrentSlide((prev) => prev + 1)
   }
 
   const prevSlide = () => {
     if (isTransitioning) return
     setIsTransitioning(true)
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
-    setTimeout(() => setIsTransitioning(false), 500)
+    setCurrentSlide((prev) => prev - 1)
   }
 
   const goToSlide = (index: number) => {
     if (isTransitioning) return
     setIsTransitioning(true)
-    setCurrentSlide(index)
-    setTimeout(() => setIsTransitioning(false), 500)
+    setCurrentSlide(index + 1) // Add 1 to account for cloned first slide
   }
+
+  const extendedSlides = [totalSlides - 1, ...Array.from({ length: totalSlides }, (_, i) => i), 0]
 
   return (
     <section id="servicos" className="py-16 bg-gray-50">
@@ -127,11 +147,12 @@ export function OurServices() {
           {/* Carousel Container */}
           <div className="overflow-hidden">
             <div
+              ref={carouselRef}
               className={`flex ${isTransitioning ? "transition-transform duration-500 ease-in-out" : ""}`}
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                <div key={slideIndex} className="w-full flex-shrink-0">
+              {extendedSlides.map((slideIndex, idx) => (
+                <div key={idx} className="w-full flex-shrink-0">
                   <div
                     className={`grid gap-4 sm:gap-6 px-16 sm:px-8 lg:px-12 ${
                       servicesPerSlide === 1 ? "grid-cols-1" : servicesPerSlide === 2 ? "grid-cols-2" : "grid-cols-3"
@@ -173,7 +194,11 @@ export function OurServices() {
                 onClick={() => goToSlide(index)}
                 disabled={isTransitioning}
                 className={`w-3 h-3 rounded-full transition-all duration-200 disabled:opacity-50 ${
-                  index === currentSlide ? "bg-[#003270]" : "bg-gray-300 hover:bg-gray-400"
+                  currentSlide === index + 1 ||
+                  (currentSlide === 0 && index === totalSlides - 1) ||
+                  (currentSlide === totalSlides + 1 && index === 0)
+                    ? "bg-[#003270]"
+                    : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Ir para grupo de serviços ${index + 1}`}
               />
