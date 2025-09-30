@@ -103,7 +103,7 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
       </head>
-      <body className="font-sans overflow-x-hidden">
+      <body className="overflow-x-hidden">
         {children}
         <WhatsAppButton />
       </body>

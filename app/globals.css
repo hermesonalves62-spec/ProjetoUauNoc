@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Added @theme block for Tailwind CSS v4 font configuration */
+@theme {
+  --font-family-sans: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
+  --font-family-body: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
+}
+
 @layer base {
   :root {
     /* Updated color tokens for ISP brand colors */
@@ -130,7 +136,7 @@
       padding-right: 1.5rem;
     }
     html {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 
@@ -142,7 +148,7 @@
       padding-right: 1.25rem;
     }
     html {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 
