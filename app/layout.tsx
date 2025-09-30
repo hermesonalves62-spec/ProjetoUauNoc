@@ -40,36 +40,36 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "ConectaNet - Internet Estável para Casa e Empresa | Instalação e Suporte 24/7",
+  title: "NOC Comércios e Serviços - Cabeamento Estruturado e Rede Telecom | Triângulo Mineiro",
   description:
-    "Internet de alta velocidade com instalação profissional, suporte 24/7 e garantia de 12 meses. Planos residenciais e empresariais com fibra óptica. Solicite seu orçamento!",
+    "Soluções especializadas em cabeamento estruturado para empresas e rede telecom para provedores. NOC Comércios e Serviços é a melhor opção para quem busca confiança e profissionalismo no setor de telecom.",
   keywords:
-    "internet fibra óptica, instalação internet, provedor internet, internet empresarial, cabeamento estruturado, suporte técnico 24/7, wifi mesh, projetos de rede",
-  authors: [{ name: "ConectaNet" }],
-  creator: "ConectaNet",
-  publisher: "ConectaNet",
+    "cabeamento estruturado, rede telecom, NOC, provedores de internet, infraestrutura de rede, fibra óptica, projetos de rede, Triângulo Mineiro, Minas Gerais, serviços telecom",
+  authors: [{ name: "NOC Comércios e Serviços" }],
+  creator: "NOC Comércios e Serviços",
+  publisher: "NOC Comércios e Serviços",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.conectanet.com.br",
-    title: "ConectaNet - Internet Estável para Casa e Empresa",
+    url: "https://www.nocservicos.com.br",
+    title: "NOC Comércios e Serviços - Cabeamento Estruturado e Rede Telecom",
     description:
-      "Internet de alta velocidade com instalação profissional, suporte 24/7 e garantia de 12 meses. Planos residenciais e empresariais com fibra óptica.",
-    siteName: "ConectaNet",
+      "Soluções especializadas em cabeamento estruturado para empresas e rede telecom para provedores no Triângulo Mineiro.",
+    siteName: "NOC Comércios e Serviços",
     images: [
       {
         url: "/assets/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ConectaNet - Provedor de Internet",
+        alt: "NOC Comércios e Serviços - Soluções em Telecom",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ConectaNet - Internet Estável para Casa e Empresa",
-    description: "Internet de alta velocidade com instalação profissional e suporte 24/7.",
+    title: "NOC Comércios e Serviços - Cabeamento Estruturado e Rede Telecom",
+    description: "Soluções especializadas em cabeamento estruturado para empresas e rede telecom para provedores.",
     images: ["/assets/og-image.jpg"],
   },
   generator: "v0.app",
@@ -79,32 +79,23 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "ConectaNet",
-  description: "Provedor de internet com instalação residencial e empresarial, manutenção e projetos de redes",
-  url: "https://www.conectanet.com.br",
-  telephone: "+5511999999999",
-  email: "contato@conectanet.com.br",
+  name: "NOC Comércios e Serviços",
+  description: "Soluções especializadas em cabeamento estruturado para empresas e rede telecom para provedores",
+  url: "https://www.nocservicos.com.br",
+  telephone: "+5534999999999",
+  email: "contato@nocservicos.com.br",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Rodovia Pedro Almeida Valadares 2363",
-    addressLocality: "Simão Dias",
-    addressRegion: "SE",
-    postalCode: "49480-000",
+    addressLocality: "Triângulo Mineiro",
+    addressRegion: "MG",
     addressCountry: "BR",
   },
-  openingHours: ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"],
-  serviceArea: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: -10.7364,
-      longitude: -37.8197,
-    },
-    geoRadius: 50000,
+  openingHours: ["Mo-Fr 08:00-18:00"],
+  areaServed: {
+    "@type": "State",
+    name: "Minas Gerais",
   },
-  priceRange: "R$ 79,90 - R$ 299,90",
-  paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
-  currenciesAccepted: "BRL",
+  serviceType: ["Cabeamento Estruturado", "Rede Telecom", "Infraestrutura de Rede", "Projetos de Fibra Óptica"],
 }
 
 export const viewport = {
