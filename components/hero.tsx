@@ -50,9 +50,9 @@ export function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-2 sm:px-6 md:px-8 lg:px-8 xl:px-10 relative z-10 pt-4 sm:pt-12 md:pt-20 overflow-hidden">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 md:gap-16 lg:gap-12 xl:gap-14 items-center">
-          <div className="space-y-2 sm:space-y-8 md:space-y-10 max-w-none lg:max-w-2xl xl:max-w-2xl">
+      <div className="container mx-auto px-2 sm:px-6 md:px-8 lg:px-6 xl:px-8 relative z-10 pt-4 sm:pt-12 md:pt-20 overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 md:gap-16 lg:gap-8 xl:gap-10 items-center">
+          <div className="space-y-2 sm:space-y-8 md:space-y-10 max-w-none lg:max-w-xl xl:max-w-2xl">
             <div className="space-y-2 sm:space-y-4 md:space-y-8 text-center md:text-left">
               <h1
                 ref={titleAnimation.ref}
