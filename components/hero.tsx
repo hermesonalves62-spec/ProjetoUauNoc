@@ -72,10 +72,10 @@ export function Hero() {
                   <span className="text-[#003270] tracking-normal">cabeamento estruturado</span>
                   <span className="text-gray-700"> para empresas </span>
                 </span>
-                <span className="block text-gray-700 font-normal sm:whitespace-nowrap">
+                <span className="block text-gray-700 font-normal">
                   <span className="text-gray-700">e </span>
-                  <span className="text-[#003270]">rede telecom</span>
-                  <br className="sm:hidden" /> <span className="whitespace-nowrap">para provedores</span>
+                  <span className="text-[#003270]">rede telecom </span>
+                  <span className="whitespace-nowrap">para provedores</span>
                 </span>
               </h1>
 
