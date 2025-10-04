@@ -67,14 +67,18 @@ export function Hero() {
                 <span className="block text-gray-700 font-normal tracking-tighter sm:tracking-tight">
                   Soluções especializadas em
                 </span>
+                <br className="md:hidden" />
                 <span className="block font-light">
                   <span className="text-[#003270] tracking-normal">cabeamento estruturado</span>
                 </span>
+                <br className="md:hidden" />
                 <span className="block text-gray-700 font-normal">
-                  <span className="text-gray-700">para empresas e </span>
-                  <span className="text-[#003270]">rede telecom</span>
+                  <span className="text-gray-700">para empresas e rede telecom</span>
                 </span>
-                <span className="block text-gray-700 font-normal">para provedores</span>
+                <br className="md:hidden" />
+                <span className="block text-gray-700 font-normal">
+                  <span className="whitespace-nowrap">para provedores</span>
+                </span>
               </h1>
 
               <p
