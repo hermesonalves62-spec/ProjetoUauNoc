@@ -118,6 +118,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${orbitron.variable} ${poppins.variable} antialiased`}>
       <head>
+        <link rel="preload" href="/fonts/Orbitron-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Orbitron-Medium.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Orbitron-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Orbitron-Black.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
       </head>

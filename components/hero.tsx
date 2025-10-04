@@ -60,23 +60,24 @@ export function Hero() {
                   titleAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
                 style={{
-                  fontSize: "clamp(0.7rem, 3.2vw, 3.8rem)",
-                  lineHeight: "1.1",
+                  fontSize: "clamp(0.65rem, 3.2vw, 3.8rem)",
+                  lineHeight: "1.2",
                 }}
               >
-                <span className="block text-gray-700 font-normal whitespace-nowrap tracking-tighter sm:tracking-tight">
+                <span className="block text-gray-700 font-normal tracking-tighter sm:tracking-tight">
                   Soluções especializadas em
                 </span>
-                <span className="block font-light sm:whitespace-nowrap">
-                  {" "}
+                <br className="md:hidden" />
+                <span className="block font-light">
                   <span className="text-[#003270] tracking-normal">cabeamento estruturado</span>
-                  <span className="text-gray-700"> para empresas </span>
                 </span>
-                <span className="block text-gray-700 font-normal sm:whitespace-nowrap">
-                  <span className="text-gray-700">e </span>
+                <br className="md:hidden" />
+                <span className="block text-gray-700 font-normal">
+                  <span className="text-gray-700">para empresas e </span>
                   <span className="text-[#003270]">rede telecom</span>
-                  <br className="sm:hidden" /> <span className="whitespace-nowrap">para provedores</span>
                 </span>
+                <br className="md:hidden" />
+                <span className="block text-gray-700 font-normal">para provedores</span>
               </h1>
 
               <p
