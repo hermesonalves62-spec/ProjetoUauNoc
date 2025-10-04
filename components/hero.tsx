@@ -64,19 +64,17 @@ export function Hero() {
                   lineHeight: "1.1",
                 }}
               >
-                <span className="block text-gray-700 font-normal whitespace-nowrap tracking-tighter sm:tracking-tight">
+                <span className="block text-gray-700 font-normal tracking-tighter sm:tracking-tight">
                   Soluções especializadas em
                 </span>
-                <span className="block font-light sm:whitespace-nowrap">
-                  {" "}
+                <span className="block font-light">
                   <span className="text-[#003270] tracking-normal">cabeamento estruturado</span>
-                  <span className="text-gray-700"> para empresas </span>
                 </span>
-                <span className="block text-gray-700 font-normal sm:whitespace-nowrap">
-                  <span className="text-gray-700">e </span>
+                <span className="block text-gray-700 font-normal">
+                  <span className="text-gray-700">para empresas e </span>
                   <span className="text-[#003270]">rede telecom</span>
-                  <br className="sm:hidden" /> <span className="whitespace-nowrap">para provedores</span>
                 </span>
+                <span className="block text-gray-700 font-normal">para provedores</span>
               </h1>
 
               <p
